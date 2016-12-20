@@ -1,7 +1,7 @@
 package com.zensar.bankingsystem.beans;
 
 public class Account {
-	private int accountId;
+	private int accountNumber;
 	private String accountType;
 	private int balance;
 
@@ -9,19 +9,19 @@ public class Account {
 		super();
 	}
 
-	public Account(int accountId, String accountType, int balance) {
+	public Account(int accountNumber, String accountType, int balance) {
 		super();
-		this.accountId = accountId;
+		this.accountNumber = accountNumber;
 		this.accountType = accountType;
 		this.balance = balance;
 	}
 
-	public int getAccountId() {
-		return accountId;
+	public int getAccountNumber() {
+		return accountNumber;
 	}
 
-	public void setAccountId(int accountId) {
-		this.accountId = accountId;
+	public void setAccountNumber(int accountNumber) {
+		this.accountNumber = accountNumber;
 	}
 
 	public String getAccountType() {
@@ -42,7 +42,8 @@ public class Account {
 
 	@Override
 	public String toString() {
-		return "Account [accountId=" + accountId + ", accountType=" + accountType + ", balance=" + balance + "]";
+		return "Account [accountNumber=" + accountNumber + ", accountType=" + accountType + ", balance=" + balance
+				+ "]";
 	}
 
 }
