@@ -8,18 +8,20 @@ public class Transaction {
 	private int accountTo;
 	private Date date;
 	private String type;
+	private int amount;
 
 	public Transaction() {
 		super();
 	}
 
-	public Transaction(int transactionId, int accountFrom, int accountTo, Date date, String type) {
+	public Transaction(int transactionId, int accountFrom, int accountTo, Date date, String type, int amount) {
 		super();
 		this.transactionId = transactionId;
 		this.accountFrom = accountFrom;
 		this.accountTo = accountTo;
 		this.date = date;
 		this.type = type;
+		this.amount = amount;
 	}
 
 	public int getTransactionId() {
@@ -62,10 +64,18 @@ public class Transaction {
 		this.type = type;
 	}
 
+	public int getAmount() {
+		return amount;
+	}
+
+	public void setAmount(int amount) {
+		this.amount = amount;
+	}
+
 	@Override
 	public String toString() {
 		return "Transaction [transactionId=" + transactionId + ", accountFrom=" + accountFrom + ", accountTo="
-				+ accountTo + ", date=" + date + ", type=" + type + "]";
+				+ accountTo + ", date=" + date + ", type=" + type + ", amount=" + amount + "]";
 	}
 
 }
