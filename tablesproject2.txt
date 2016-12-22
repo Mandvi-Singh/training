@@ -6,4 +6,4 @@ create table Account(AccountNumber int(10) primary key, CustomerId int(10),Accou
 
 create table Beneficiary(BeneficiaryAccountNumber int(10), BeneficiaryAccountType varchar(10), BeneficiaryAccountIfscCode varchar (10),BeneficiaryName varchar(20) primary key, BeneficiaryEmailId varchar(30));
 
-create table Transaction(TransactionId int(10) primary key, AccountNumber int(10),  AccountTo int(10), AccountFrom int(10), Date date, Amount int(10), Type varchar(10),foreign key (AccountNumber ) references Account(AccountNumber)); 
+create table Transaction(TransactionId int(10) primary key, AccountNumber int(10),  AccountTo int(10), AccountFrom int(10), Date date, Amount int(10), Type varchar(10)); 
